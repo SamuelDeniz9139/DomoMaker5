@@ -191,8 +191,8 @@ nav:nth-child(1) {
     transform: rotate(330deg);
 }
 
-#clicked{
-    color:blueviolet;
+.clicked{
+    background-color:red;
     margin: 1px;
     border: 0px;
 }
