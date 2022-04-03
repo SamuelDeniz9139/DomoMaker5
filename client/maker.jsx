@@ -2,11 +2,15 @@ const helper=require('./helper.js');
 const handleDomo=(e)=>{
     e.preventDefault();
     helper.hideError();
-    const name=e.target.querySelector('#domoName').value;
-    const age=e.target.querySelector('#domoAge').value;
-    const color=e.target.querySelector('#domoColor').value;
+    let name=e.target.querySelector('#domoName').value;
+    let age=e.target.querySelector('#domoAge').value;
+    let color=e.target.querySelector('#domoColor').value;
     const _csrf=e.target.querySelector('#_csrf').value;
-    if(!name||!age||!color){
+    if(!name&&!age&&!color){
+        name="Are you trying to be funny by not naming me?";
+        age="69";
+        color="Purple, I guess";
+    } else if(!name||!age||!color){
         helper.handleError('All fields are required.');
         return false;
     }
