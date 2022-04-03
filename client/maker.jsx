@@ -6,13 +6,7 @@ const handleDomo=(e)=>{
     const age=e.target.querySelector('#domoAge').value;
     const color=e.target.querySelector('#domoColor').value;
     const _csrf=e.target.querySelector('#_csrf').value;
-    if(!name&&!age&&!color){
-        let noName="I wasn't named.";
-        let noAge="42"
-        let noColor="White, I guess"
-        helper.sendPost(e.target.action, {noName,noAge,noColor,_csrf}, loadDomosFromServer);
-        return false;
-    } else if(!name||!age||!color){
+    if(!name||!age||!color){
         helper.handleError('All fields are required.');
         return false;
     }
