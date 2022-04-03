@@ -238,27 +238,11 @@ h3.emptyDomo {
     margin-top: 18px;
 }
 
-h3.domoName {
+h3.domoInfo {
     float:left;
     width: 200px;
     font-weight: bold;
     padding-left: 65px;
-    font-size: 1.5em;
-}
-
-h3.domoColor {
-    width: 100px;
-    font-weight: bold;
-    padding-left: 65px;
-    font-size: 1.5em;
-}
-
-h3.domoAge {
-    float:right;
-    text-align: left;
-    width: 100px;
-    font-weight: bold;
-    padding-right: 40px;
     font-size: 1.5em;
 }
 
