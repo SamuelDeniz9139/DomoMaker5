@@ -1,6 +1,5 @@
 const models = require('../models');
 const DomoModel = require('../models/Domo');
-
 const { Domo } = models;
 const makerPage = (req, res) => res.render('app');
 const getDomos = (req, res) => DomoModel.findByOwner(req.session.account._id, (err, docs) => {

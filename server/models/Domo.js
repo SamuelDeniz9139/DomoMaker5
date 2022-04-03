@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const _ = require('underscore');
-
 let DomoModel = {};
 const setName = (name) => _.escape(name).trim();
 const DomoSchema = new mongoose.Schema({
@@ -12,6 +11,11 @@ const DomoSchema = new mongoose.Schema({
   },
   age: {
     type: Number,
+    min: 0,
+    required: true,
+  },
+  color: {
+    type: String,
     min: 0,
     required: true,
   },
