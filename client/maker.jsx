@@ -10,6 +10,11 @@ const handleDomo=(e)=>{
         helper.handleError('All fields are required.');
         return false;
     }
+    if(!name&&!age&&!color){
+        name="lazy";
+        age="42"
+        color="white, i guess"
+    }
     helper.sendPost(e.target.action, {name,age,color,_csrf}, loadDomosFromServer);
     return false;
 }
@@ -60,11 +65,6 @@ const loadDomosFromServer=async()=>{
         <DomoList domos={data.domos} />,
         document.getElementById('domos')
     );
-    document.querySelectorAll("domo").forEach(item=>{
-        item.addEventListener('click',event=>{
-            item.classList.add("clicked");
-        })
-    });
 }
 const init = async () => {
     const response = await fetch('/getToken');

@@ -191,12 +191,6 @@ nav:nth-child(1) {
     transform: rotate(330deg);
 }
 
-.clicked{
-    background-color:red;
-    margin: 1px;
-    border: 0px;
-}
-
 #domos {
     width: 40%;
     min-width: 400px;
