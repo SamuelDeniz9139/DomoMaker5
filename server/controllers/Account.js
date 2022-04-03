@@ -47,7 +47,7 @@ const signup = async (req, res) => {
 const getToken = (req, res) => {
   return res.json({csrfToken: req.csrfToken()});
 };
-const getRegi = (req, res) => {
+const ununun = (req, res) => {
   return res.json({ redirect:'/ununun' });
 };
 module.exports = {
@@ -56,5 +56,5 @@ module.exports = {
   logout,
   signup,
   getToken,
-  getRegi,
+  ununun,
 };
