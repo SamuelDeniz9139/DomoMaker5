@@ -60,6 +60,11 @@ const loadDomosFromServer=async()=>{
         <DomoList domos={data.domos} />,
         document.getElementById('domos')
     );
+    document.querySelectorAll("domo").forEach(item=>{
+        item.addEventListener('click',event=>{
+            item.classList.add("clicked");
+        })
+    });
 }
 const init = async () => {
     const response = await fetch('/getToken');
