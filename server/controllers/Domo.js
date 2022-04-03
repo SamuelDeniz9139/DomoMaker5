@@ -10,7 +10,7 @@ const getDomos = (req, res) => DomoModel.findByOwner(req.session.account._id, (e
   return res.json({ domos: docs });
 });
 const makeDomo = async (req, res) => {
-  if (!req.body.name || !req.body.age) {
+  if (!req.body.name || !req.body.age || !req.body.color) {
     return res.status(400).json({ error: 'All fields required.' });
   }
   const domoData = {
